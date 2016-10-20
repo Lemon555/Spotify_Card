@@ -11,7 +11,7 @@ module Spotify
 			@search_type = "track"
 			@track_name = input
 			search_response = HTTP.get('https://api.spotify.com/v1/search', params: { q: @track_name, type: @search_type})
-			@search_result = JSON.parse(search_response.to_s)['items']
+			@search_result = JSON.parse(search_response.to_s)['tracks']['items']
 		end
 
 		def get_songs
