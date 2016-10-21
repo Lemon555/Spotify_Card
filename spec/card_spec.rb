@@ -18,11 +18,11 @@ describe 'card specifications' do
 
   it 'should be able to get a hash from Search Class' do
     search = Spotify::Search.new(@spotify_api, 'Eyes Shut')
-    search.get_songs.is_a?(Hash)
+    search.create_songshash.is_a?(Hash)
   end
 
   it 'should be able to get a track_id' do
     search = Spotify::Search.new(@spotify_api, 'Eyes Shut')
-    search.get_songs[@track_id].track_id = @track_id
+    search.create_songshash[@track_id].track_name = 'Eyes Shut'
   end
 end
