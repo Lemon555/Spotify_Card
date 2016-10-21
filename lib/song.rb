@@ -8,7 +8,7 @@ module Spotify
 			@track_link = track_link
 			@album_name = album_name
 			@artist_name = artist_name
-			@imgs = img
+			@imgs = imgs
 		end
 	end
 end
