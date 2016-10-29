@@ -9,7 +9,7 @@ require 'webmock'
 
 require_relative '../lib/search.rb'
 
-FIXTURES_FOLDER = './fixtures'.freeze
+FIXTURES_FOLDER = './spec/fixtures'.freeze
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes".freeze
 CASSETTE_FILE = 'spotify_api'.freeze
 # CREDENTIALS = YAML.load(File.read('../config/credentials.yml'))
