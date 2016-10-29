@@ -16,13 +16,14 @@ describe 'card specifications' do
     VCR.eject_cassette
   end
 
-  it 'should be able to get a hash from Search Class' do
-    search = Spotify::Search.new(@spotify_api, 'Eyes Shut')
-    search.create_songshash.is_a?(Hash)
+  it 'should be able to get a hash from SpAPI Class' do
+    search = Spotify::Search.find('Eyes Shut')
+    search.is_a?(Hash)
   end
 
   it 'should be able to get a track_id' do
-    search = Spotify::Search.new(@spotify_api, 'Eyes Shut')
-    search.create_songshash[@track_id].track_name = 'Eyes Shut'
+    search = Spotify::Search.find('Eyes Shut')
+    File.write('./spec/fixtures/test.yml', search.to_yaml)
+    search[@track_id].track_name = 'Eyes Shut'
   end
 end
