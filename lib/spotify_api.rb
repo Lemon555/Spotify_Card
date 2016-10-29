@@ -8,7 +8,7 @@ module Spotify
     SP_URL = 'https://api.spotify.com'.freeze
     API_VER = 'v1'.freeze
     SP_API_URL = URI.join(SP_URL, "#{API_VER}/")
-    SEARCH_TYPE = "track"
+    SEARCH_TYPE = 'track'.freeze
 
     def self.search_feed(input)
       search_response = HTTP.get(

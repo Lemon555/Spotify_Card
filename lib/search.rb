@@ -1,7 +1,6 @@
 require_relative 'spotify_api'
 require_relative 'song'
 
-
 module Spotify
   # Create a Song object
   class Search
@@ -17,10 +16,6 @@ module Spotify
     def self.find(input)
       search_data = Spotify::SpAPI.search_feed(input)
       new(search_data).songs
-    end
-
-    def count
-      @songs.count
     end
   end
 end

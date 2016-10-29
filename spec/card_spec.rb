@@ -23,7 +23,6 @@ describe 'card specifications' do
 
   it 'should be able to get a track_id' do
     search = Spotify::Search.find('Eyes Shut')
-    File.write('./spec/fixtures/test.yml', search.to_yaml)
     search[@track_id].track_name = 'Eyes Shut'
   end
 end

@@ -11,15 +11,11 @@ module Spotify
     def self.create(search_result)
       @songs_hash = {}
       search_result.map do |song|
-        artists = get_artists(song['artists'])
-        imgs = get_album_imgs(song['album']['images'])
         @songs_hash[song['id']] = {
-          :id => song['id'],
-          :track_name => song['name'],
-          :track_link => song['external_urls']['spotify'],
-          :album_name => song['album']['name'],
-          :artist_name => artists,
-          :imgs => imgs
+          id: song['id'], track_name: song['name'],
+          link: song['external_urls']['spotify'], album: song['album']['name'],
+          artist: get_artists(song['artists']),
+          imgs: get_album_imgs(song['album']['images'])
         }
       end
       @songs_hash
