@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    spotifysearch (0.1.0)
+      http (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -30,6 +36,8 @@ GEM
     http_parser.rb (0.6.0)
     json (1.8.3)
     minitest (5.9.0)
+    minitest-rg (5.2.0)
+      minitest (~> 5.0)
     parser (2.3.1.4)
       ast (~> 2.2)
     path_expander (1.0.0)
@@ -66,15 +74,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  flay
-  flog
-  http
-  minitest
-  rake
-  rubocop
-  simplecov
-  vcr
-  webmock
+  flay (~> 2.8)
+  flog (~> 4.4)
+  minitest (~> 5.9)
+  minitest-rg (~> 5.2)
+  rake (~> 10.4)
+  rubocop (~> 0.43)
+  simplecov (~> 0.12)
+  spotifysearch!
+  vcr (~> 3.0)
+  webmock (~> 2.1)
 
 BUNDLED WITH
    1.13.0
