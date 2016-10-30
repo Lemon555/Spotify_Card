@@ -1,4 +1,5 @@
-# Spotifysearch Gem
+# Spotifysearch Gem 
+[![Build Status](https://travis-ci.org/Lemon555/Spotify_Card.svg?branch=master)](https://travis-ci.org/Lemon555/Spotify_Card)
 
 Spotifysearch Gem helps you generate your song into a picture to share on social media!
 * Auto search for nice album artwork
