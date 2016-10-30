@@ -14,7 +14,7 @@ module Spotify
         @songs_hash[song['id']] = {
           id: song['id'], track_name: song['name'],
           link: song['external_urls']['spotify'], album: song['album']['name'],
-          artist_name: get_artists(song['artists']),
+          artist: get_artists(song['artists']),
           imgs: get_album_imgs(song['album']['images'])
         }
       end

@@ -2,3 +2,5 @@ config/
 coverage/
 spec/fixtures/
 spec/coverage/
+spec/fixtures/cassettes
+Gemfile.lock

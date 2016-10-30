@@ -7,9 +7,9 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/search.rb'
+require_relative '../lib/spotifysearch'
 
-FIXTURES_FOLDER = './spec/fixtures'.freeze
+FIXTURES_FOLDER = 'spec/fixtures'.freeze
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes".freeze
 CASSETTE_FILE = 'spotify_api'.freeze
 # CREDENTIALS = YAML.load(File.read('../config/credentials.yml'))
