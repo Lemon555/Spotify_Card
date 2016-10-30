@@ -12,8 +12,8 @@ module Spotify
     def load_data(data)
       @track_name = data[:track_name]
       @track_link = data[:link]
-      @album_name = data[:name]
-      @artist_name = data[:name]
+      @album_name = data[:album]
+      @artist_name = data[:artist]
       @imgs = data[:imgs]
     end
   end
