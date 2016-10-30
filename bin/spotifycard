@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-$LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require 'spotifycard'
 
 user_input = ARGV[0]
