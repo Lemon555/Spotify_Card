@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+require 'spotifycard'
+
+user_input = ARGV[0]
+unless user_input
+  puts 'USAGE: spotifycard [user_input]'
+  exit(1)
+end
+
+search = Spotify::Search.find(user_input)
+puts 'Search Result:'
+search.each_value do |songinfo|
+		puts "track: #{songinfo.track_name}"
+		puts "artist: #{songinfo.artist_name}"
+		puts "album: #{songinfo.album_name}"
+		puts
+end
