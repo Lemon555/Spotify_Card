@@ -21,8 +21,23 @@ describe 'card specifications' do
     search.is_a?(Hash)
   end
 
-  it 'should be able to get a track_id' do
+  it 'should be able to get the name of a track' do
     search = Spotify::Search.find('Eyes Shut')
     search[@track_id].track_name = 'Eyes Shut'
+  end
+
+  it 'should be able to get a list of name of artist' do
+    search = Spotify::Search.find('Eyes Shut')
+    search[@track_id].artist_name = 'Years & Years'
+  end
+
+  it 'should be able to get the name of the album' do
+    search = Spotify::Search.find('Eyes Shut')
+    search[@track_id].album_name = 'Communion (Deluxe)'
+  end
+
+  it 'should be able to get a array of images' do
+    search = Spotify::Search.find('Eyes Shut')
+    search[@track_id].imgs.is_a?(Array)
   end
 end
