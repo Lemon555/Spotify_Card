@@ -15,5 +15,6 @@ search.each_value do |songinfo|
 		puts "track: #{songinfo.track_name}"
 		puts "artist: #{songinfo.artist_name}"
 		puts "album: #{songinfo.album_name}"
+		puts "img_url: #{songinfo.imgs[0]}"
 		puts
 end
