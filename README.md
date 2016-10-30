@@ -20,7 +20,11 @@ $ gem install spotifysearch
 
 Require Spotifysearch gem in your code: require 'Spotifysearch'
 
-Use a track name as parameter
+You should use a track name as the input argument.
+
+**Notice that you have to use plus sign ("+") instead of a blank to combine each word.
+
+For example, If "Eyes Shut" is the track name you want to search, "Eyes+Shut" is the correct type of input. 
 
 See the following example code for more usage details:
 
